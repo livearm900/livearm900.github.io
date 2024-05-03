@@ -1,0 +1,81 @@
+/* กำหนด font-family ทั้งหมดให้เป็น Roboto พร้อม fallback เป็น sans-serif */
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+
+/* ส่วนของหน้าเข้าสู่ระบบ */
+.login-page {
+  width: 100vw;
+  height: 100vh;
+  /* ใช้สีพื้นหลังเป็นลิเนียร์เกรเดียนต์จากมุมบนซ้ายไปมุมล่างขวา */
+  background: linear-gradient(to bottom right, #8c59ad, #afafaf);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* เพิ่ม position เพื่อให้สามารถใช้งานค่า top และ left ได้ */
+}
+
+/* เพิ่มข้อความในมุมซ้ายบน */
+.login-page::before {
+  content: "Realtime Chat"; /* เพิ่มข้อความที่ต้องการแสดง */
+  position: absolute; /* ตั้งค่า position เป็น absolute เพื่อให้ข้อความอยู่บนพื้นหลัง */
+  top: 10px; /* กำหนดระยะห่างด้านบน */
+  left: 10px; /* กำหนดระยะห่างด้านซ้าย */
+  font-size: 24px; /* กำหนดขนาดตัวอักษร */
+  color: white; /* กำหนดสีข้อความ */
+  font-weight: bold; /* กำหนดความหนาของตัวอักษร */
+}
+
+
+/* กล่องของข้อมูลผู้ใช้ */
+.card {
+  width: 300px; 
+  padding: 16px;
+  background-color: white;
+  border-radius: 15px;
+  /* เงาที่มีสีเทาอ่อน สร้างเอฟเฟกต์เสมือนเมื่อกล่องขยับ */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* ส่วนของหัวข้อ */
+.title {
+  font-size: 28px; 
+  color: #5b4197;
+  font-weight: bold;
+  margin-bottom: 16px; 
+}
+
+/* ช่องป้อนข้อมูล */
+input {
+  width: 100%;
+  margin-top: 12px; 
+  padding: 10px;
+  background-color: #eef7ff;
+  outline: none;
+  border: 1px solid #5b4197;
+  border-radius: 8px;
+}
+
+/* ปุ่ม */
+button {
+  margin-top: 8px;
+  width: 100%;
+  padding: 8px;
+  background-color: #5b4197;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* เมื่อเมาส์ชี้ไปที่ปุ่ม */
+button:hover {
+  background-color: #453076;
+}
